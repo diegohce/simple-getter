@@ -29,14 +29,14 @@ const (
 	ClientModeFile = 0
 )
 
-type ClientOptions struct{}
+type ClientOption struct{}
 
 type Client struct {
 	Ctx     context.Context
 	Src     string
 	Dst     string
 	Mode    int
-	Options []ClientOptions
+	Options []ClientOption
 }
 
 func (c *Client) Get() error {
